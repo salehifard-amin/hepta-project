@@ -219,6 +219,7 @@
 .destination .destination-item .image a img {
     box-shadow: 4px 6px 6px rgba(10, 54, 0, 0.2);
 }
+
 .destination .destination-item .details a {
     display: inline-block;
     padding-top: 15px;
@@ -226,9 +227,29 @@
 .destination .destination-item .details a:hover h3 {
     color: #65c0ba;
 }
-.destination .destination-item .details .statistics .stars i {
-    font-size: 13px;
+.destination .destination-item .details .statistics .stars {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.destination .destination-item .details .statistics .stars label {
+    font-size: 14px;
+    cursor: pointer;
     color: #65c0ba;
+}
+.destination .destination-item .details .statistics .stars input {
+    display: none;
+}
+.destination .destination-item .details .statistics .stars label:hover,
+.destination .destination-item .details .statistics .stars label:hover ~ label {
+    color: gold;
+}
+.destination .destination-item .details .statistics .stars input:checked,
+.destination .destination-item .details .statistics .stars input:checked ~ label {
+    color: gold;
+}
+.destination .destination-item .details .statistics .stars i {
+    /* color: #65c0ba; */
 }
 .destination .destination-item .details .statistics .reviews span {
     color: #ccc;
